@@ -13,12 +13,7 @@ export default class Header extends Component {
               <ul className="nav navbar-nav pull-right">
                 <li>
                   <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
-                    <span>Resume</span>
-                  </a>
-                </li>
-                <li>
-                  <a href={personalInfo.email} className="nav-link">
-                    <i className="fa fa-envelope icon"></i>
+                    <span>CV</span>
                   </a>
                 </li>
                 <li>
@@ -29,11 +24,6 @@ export default class Header extends Component {
                 <li>
                   <a href={personalInfo.linkedIn} className="nav-link" target="_blank">
                     <i className="fa fa-linkedin-square icon"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href={personalInfo.angelList} className="nav-link" target="_blank">
-                    <i className="fa fa-angellist icon"></i>
                   </a>
                 </li>
                 </ul>
