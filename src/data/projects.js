@@ -1,13 +1,13 @@
 const projectsData = {
   data: [
     {
-      desktop_image: 'http://wallup.net/wp-content/uploads/2015/12/240881-waterfall-forest-colorful-nature-Thailand-trees-landscape-pink-turquoise-white-tropical-river-pond-leaves-736x459.jpg',
-      mobile_image: 'http://2.bp.blogspot.com/_o0sizlWlquE/SU_4cOXI3zI/AAAAAAAAAHo/aLUJ-5Oq_yI/s400/Color_Chart.jpg',
-      title: 'Project Title',
-      date: '2016',
+      desktop_image: '/hcbanner.png',
+      mobile_image: '/hclogo.png',
+      title: 'General Manager/Social Media Manager',
+      date: '2018',
       github_url: 'https://github.com/',
       project_url: 'https://github.com/',
-      background: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      background: 'Hack Cambridge is the University of Cambridge\'s official Hackathon. Each year, we welcome over 300 students from universities across the UK to see what they can make in 24 hours.',
       role: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       tech_stack: ['React.js', 'socket.io', 'Redux', 'PostgreSQL', 'Node.js', 'express']
     }
