@@ -5,7 +5,23 @@ import TechStackItem from './projectComponents/TechStackItem';
 export default class Project extends Component {
   constructor(props, context) {
     super(props, context);
+    this.state = {
+      width: window.innerWidth,
+    };
   }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange.bind(this));
+  }
+
+  handleWindowSizeChange() {
+    console.log('triggered');
+    this.setState({ width: window.innerWidth });
+  };
 
   render() {
     const { project } = this.props;
@@ -17,8 +33,7 @@ export default class Project extends Component {
       <div className="project-container">
         <div className="image-container" >
           <div className="screenshot-container">
-            { project.gfycat ? <div className="gfyitem" data-id="SilkyNextIrishwolfhound" ></div> : <img src={project.desktop_image}/> }
-            { project.mobile_image !== '' ? <Mobile image={project.mobile_image}/> : null }
+            { this.state.width <= 500 ? <img src={project.mobile_image}/> : <img src={project.desktop_image}/>}
           </div>
         </div>
         <div className="project-info">
