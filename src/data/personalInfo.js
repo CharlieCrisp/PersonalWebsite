@@ -1,10 +1,9 @@
 const personalInfoData = {
-  name: 'Your Name',
-  linkedIn: 'https://www.linkedin.com/',
-  github: 'https://github.com/',
-  angelList: 'https://angel.co/',
-  email: 'mailto:you@gmail.com',
-  resume: 'https://www.dropbox.com/'
+  name: 'Charlie Crisp',
+  linkedIn: 'https://www.linkedin.com/in/charlie-crisp-88aab5122/',
+  github: 'https://github.com/charliecrisp',
+  email: '[firstname][secondname]249@gmail.com',
+  resume: '/CV.pdf'
 };
 
 export { personalInfoData };
