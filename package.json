@@ -6,7 +6,7 @@
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "dev": "NODE_ENV=development npm start",
+    "dev": "SET NODE_ENV=development && npm start",
     "start": "node devServer.js",
     "lint": "eslint src"
   },
@@ -34,7 +34,7 @@
     "express": "^4.13.3",
     "file-loader": "^0.8.5",
     "image-webpack-loader": "^1.6.3",
-    "node-sass": "^3.4.2",
+    "node-sass": "^4.8.3",
     "redux-devtools": "^3.0.1",
     "redux-devtools-dock-monitor": "^1.0.1",
     "redux-devtools-log-monitor": "^1.0.2",
@@ -52,8 +52,10 @@
     "react": "^0.14.3",
     "react-addons-perf": "^0.14.7",
     "react-dom": "^0.14.3",
+    "react-pdf": "^3.0.5",
     "react-perf": "^1.0.1",
     "react-redux": "^4.1.1",
+    "redux": "^4.0.0",
     "redux-thunk": "^1.0.3",
     "url-loader": "^0.5.7"
   }
