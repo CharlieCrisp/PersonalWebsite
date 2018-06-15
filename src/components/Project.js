@@ -48,8 +48,8 @@ export default class Project extends Component {
           <div>{project.background}</div>
           <h3>Role</h3>
           <div>{project.role}</div>
-          <h3>Tech Stack</h3>
-          <div className="tech-icon-container">{techStackItems}</div>
+          {(techStackItems.length != 0) ? <div><h3>Tech Stack</h3>
+          <div className="tech-icon-container">{techStackItems}</div></div> : null}
         </div>
       </div>
     );
