@@ -20,7 +20,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.listen(3000, 'localhost', (err) => {
+app.listen(process.env.port || 3000, (err) => {
   if (err) {
     console.log(err);
     return;
