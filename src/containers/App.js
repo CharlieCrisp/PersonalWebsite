@@ -5,6 +5,7 @@ import * as BenchmarkActions from '../actions/BenchmarkActions';
 import Position from '../components/Position';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Introduction from '../components/Introduction';
 import { startTime } from '../index';
 
 /**
@@ -25,6 +26,7 @@ export class App extends Component {
     return (
       <div className="main-app-container">
         <Header personalInfo={personalInfo} />
+        <div> <Introduction personalInfo={personalInfo} /> </div>
         <div className="main-app-nav">Selected Positions</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
           {positionEntries}
