@@ -2,20 +2,22 @@
   "name": "generator-simple-redux",
   "version": "1.0.0",
   "description": "My simple redux application.",
+  "homepage": "https://github.com/tsaiDavid/simple-redux-boilerplate",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
     "dev": "SET NODE_ENV=development && npm start",
-    "start": "node devServer.js",
-    "lint": "eslint src"
+    "startdev": "node devServer.js",
+    "start": "node index.js",
+    "lint": "eslint src",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tsaiDavid/simple-redux-boilerplate.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/tsaiDavid/simple-redux-boilerplate",
   "devDependencies": {
     "autoprefixer": "^6.3.1",
     "babel-core": "^6.3.15",
@@ -48,6 +50,7 @@
   },
   "dependencies": {
     "file-loader": "^0.8.5",
+    "gh-pages": "^1.2.0",
     "node-bourbon": "^4.2.3",
     "react": "^0.14.3",
     "react-addons-perf": "^0.14.7",
