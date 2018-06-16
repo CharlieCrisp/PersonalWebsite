@@ -9,7 +9,7 @@ $accent-gray: #e1e0dd;
 $accent-black: #35342f;
 $accent-orange: #ec6b2d;
 $accent-red: #dd6464;
-$project-container-color: #ece9df;
+$position-container-color: #ece9df;
 
 @import "bourbon";
 $color-snow: #fff;
@@ -58,11 +58,11 @@ h3 {
 }
 
 
-.project-container {
+.position-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: $project-container-color;
+  background-color: $position-container-color;
   height: auto;
   width: 80vw;
   padding: 5vh 5vw 5vh 5vw;
@@ -177,7 +177,7 @@ h3 {
   height: 38vh;
 }
 
-.project-info {
+.position-info {
   padding: 0 2vh 2vh 2vh;
   background-color: $color-snow;
   flex: 0 2 auto;

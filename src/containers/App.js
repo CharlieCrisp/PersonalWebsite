@@ -2,10 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as BenchmarkActions from '../actions/BenchmarkActions';
-import Project from '../components/Project';
+import Position from '../components/Position';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Statistics from '../components/Statistics';
 import { startTime } from '../index';
 
 /**
@@ -20,15 +19,15 @@ export class App extends Component {
   }
 
   render() {
-    const { projects, benchmark, personalInfo } = this.props;
-    const projectEntries = projects.map((project, index) => <Project key={index} project={project} /> );
+    const { positions, personalInfo } = this.props;
+    const positionEntries = positions.map((position, index) => <Position key={index} position={position} /> );
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
         <Header personalInfo={personalInfo} />
-        <div className="main-app-nav">Selected Projects</div>
+        <div className="main-app-nav">Selected Positions</div>
         {/* notice that we then pass those unpacked props into the Counter component */}
-          {projectEntries}
+          {positionEntries}
         <Footer personalInfo={personalInfo} />
       </div>
     );
@@ -36,7 +35,7 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  projects: PropTypes.array.isRequired,
+  positions: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
   benchmark: PropTypes.number.isRequired,
   personalInfo: PropTypes.object.isRequired
@@ -49,7 +48,7 @@ App.propTypes = {
  */
 function mapStateToProps(state) {
   return {
-    projects: state.projects,
+    positions: state.positions,
     benchmark: state.benchmark,
     personalInfo: state.personalInfo
   };

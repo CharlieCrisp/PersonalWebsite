@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import counter from './counter';
-import projects from './projects';
+import positions from './positions';
 import benchmark from './benchmark';
 import personalInfo from './personalInfo';
 
@@ -19,7 +19,7 @@ import personalInfo from './personalInfo';
  */
 const rootReducer = combineReducers({
   counter, // you might be used to: counter: counter,
-  projects,
+  positions,
   benchmark,
   personalInfo
 });
