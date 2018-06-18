@@ -226,6 +226,17 @@ ul.nav{
        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
+.large-introduction {
+  background: url('/me.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ccc;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -242,16 +253,12 @@ ul.nav{
   width: 100%;
 }
 
-.intro-image-placeholder {
-  height: 400px;
-  width: 400px;
-  margin: 30px;
-  max-width: 300px;
-}
-
-.intro-box {
+.intro-text {
   min-width: 50px;
+  width: 300px;
   margin: 10px 30px 10px 0px;
+  margin-left: 55%;
+  height: 300px;
 }
 
 @media screen and (max-width:700px) {
