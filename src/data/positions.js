@@ -31,6 +31,25 @@ const positionsData = {
         'YouTube':'https://youtube.com/hackersatcambridge',
         'Medium':'https://medium.com/hackers-at-cambridge'},
       tech_stack: []
+    },
+    {
+      desktop_image: '/mspbanner.png',
+      mobile_image: '/msplogo.png',
+      title: 'Microsoft Student Parter',
+      date: '2016-2018 (MSP Lead 2016-2017)',
+      company: 'Microsoft',
+      company_url: 'https://imagine.microsoft.com/en-us/msp',
+      background: 'Microsoft Student Partners (MSPs) work closely with Microsoft to organise events promoting the use of Azure cloud services within universities.',
+      role: `As a Microsoft Student Partner Lead I coordinated a team of 9 student partners running events over the course of a year.
+      I organised workshops on Machine Learning, Cognitive Services and IoT which were shared online for other MSPs to use at other universities.
+      Additionally, I was involved with gaining Microsoft sponsorship for Hack Cambridge and also for GreenHack.
+      After a year of being the Cambridge MSP lead, I was invited by Microsoft to the 2017 Build conference in Seattle where I got to meet the top MSPs from across the world.`,
+      links: {'IoT Workshop':'https://github.com/cambridge-msp/Azure-IoT-Workshop',
+        'Cognitive Services Workshop':'https://github.com/cambridge-msp/face-emotion-api-workshop',
+        'Blog from Build 2017':'https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/07/23/project-prague-what-is-it-and-why-should-you-care/',
+        'Hack Cambridge + Microsoft Blog':'https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/02/16/a-overview-of-cognitive-data-science-at-hack-cambridge/',
+        'MSP Cambridge Facebook Page':'https://www.facebook.com/msoftcambridge/'},
+      tech_stack: []
     }
   ]
 };
