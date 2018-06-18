@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
 
 export default class Header extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      width: window.innerWidth,
+    };
+  }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange.bind(this));
+  }
+
+  handleWindowSizeChange() {
+    console.log('triggered');
+    this.setState({ width: window.innerWidth });
+  };
+
   render() {
     const { personalInfo } = this.props;
     return (
@@ -10,6 +30,7 @@ export default class Header extends Component {
               <div className="navbar-brand">
                 <a href="#" > {personalInfo.name} </a>
               </div>
+              { this.state.width >= 320 ?
               <ul className="nav navbar-nav pull-right">
                 <li>
                   <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
@@ -27,6 +48,7 @@ export default class Header extends Component {
                   </a>
                 </li>
                 </ul>
+              : null}
             </div>
             </nav>
     );

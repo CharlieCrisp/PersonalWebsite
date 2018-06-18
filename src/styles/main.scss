@@ -49,7 +49,7 @@ h3 {
 }
 
 .main-app-container {
-  padding-top: 2em;
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -155,6 +155,7 @@ footer {
   background-image: none !important;
   box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
   padding-top: 10px;
+  margin-bottom: 0;
 }
 
 .header a {
@@ -219,16 +220,10 @@ ul.nav{
 }
 
 .introduction {
-  background-color: $accent-gray;
-  border: 30px;
   margin: 0 0 20px 0;
-  height: auto;
-  width: 80vw;
-  max-width: 700px;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-
 }
 
 .container {
@@ -243,9 +238,13 @@ ul.nav{
   .container { flex-wrap: wrap;  }
 }
 
-.intro-image {
-  height: auto;
-  width: 50vw;
+.me-mobile {
+  width: 100%;
+}
+
+.intro-image-placeholder {
+  height: 400px;
+  width: 400px;
   margin: 30px;
   max-width: 300px;
 }
@@ -271,4 +270,8 @@ ul.nav{
 
 .navbar-nav {
   margin-left: auto;
+}
+
+.navbar {
+  height: 70px;
 }
