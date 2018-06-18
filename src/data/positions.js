@@ -13,6 +13,24 @@ const positionsData = {
         'Hack Cambridge Recurse Blog Post':'https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/02/16/a-overview-of-cognitive-data-science-at-hack-cambridge/',
         'Hack Cambridge News Article':'https://www.cambridge-news.co.uk/news/cambridge-news/students-push-technology-limit-cambridges-12523640'},
       tech_stack: []
+    },
+    {
+      desktop_image: '/hacbanner.png',
+      mobile_image: '/haclogo.png',
+      title: 'Events, Social Media and Recruiting Manager',
+      date: '2016-2018',
+      company: 'Hackers at Cambridge',
+      company_url: 'https://hackersatcambridge.com/',
+      background: 'Hackers at Cambridge is the University of Cambridge\'s tech society. We run workshops, hackathons, social events and more as well as having a prescence on YouTube and Medium',
+      role: `With Hackers at Cambridge, I lead the organisation of GreenHack and ChariTech which were sustainability and charity based hackathons each attended by 60-70 people.
+        Additionally, I developed a shadowing scheme which allows new members to be onboarded in a friendly and efficient way such that very little information is lost between committee generations.
+        Finally, I also managed the social media and outreach for Hackers at Cambridge.`,
+      links: {'ChariTech':'https://charitech.hackersatcambridge.com/',
+        'GreenHack':'https://greenhack.hackersatcambridge.com/',
+        'GreenHack News Article':'https://www.varsity.co.uk/science/15205',
+        'YouTube':'https://youtube.com/hackersatcambridge',
+        'Medium':'https://medium.com/hackers-at-cambridge'},
+      tech_stack: []
     }
   ]
 };
