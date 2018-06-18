@@ -178,11 +178,15 @@ h3 {
   height: 38vh;
 }
 
-.position-info {
+.position-info-container {
   padding: 0 2vh 2vh 2vh;
   background-color: $color-snow;
   flex: 0 2 auto;
   height: 100%;
+}
+
+.position-info-body {
+  display: none;
 }
 
 .github-info {
