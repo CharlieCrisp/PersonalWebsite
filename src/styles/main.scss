@@ -68,7 +68,6 @@ h3 {
   height: auto;
   width: 80vw;
   max-width: 800px;
-  padding: 5vh 5vw 5vh 5vw;
   margin-bottom: 4vh;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
      -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -84,7 +83,6 @@ h3 {
 
 .screenshot-container img {
   width: 100%;
-  margin-bottom: 2em;
   position: relative;
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
      -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -299,6 +297,8 @@ ul.nav{
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media screen and (max-width:700px) {
@@ -314,7 +314,14 @@ ul.nav{
 
 .intro-box {
   min-width: 50px;
-  margin: 10px;
+  margin: 10px 30px 10px 0px;
+}
+
+@media screen and (max-width:700px) {
+  .intro-box { 
+    flex-wrap: wrap;
+    margin: 0px 30px 30px 30px;  
+  }
 }
 
 .navbar-brand {
