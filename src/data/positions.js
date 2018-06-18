@@ -50,7 +50,23 @@ const positionsData = {
         'Hack Cambridge + Microsoft Blog':'https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/02/16/a-overview-of-cognitive-data-science-at-hack-cambridge/',
         'MSP Cambridge Facebook Page':'https://www.facebook.com/msoftcambridge/'},
       tech_stack: []
-    }
+    },
+    {
+      desktop_image: '/madanyubanner.png',
+      mobile_image: '/madanyulogo.png',
+      title: 'Volunteer Instructor',
+      date: 'Summer 2016',
+      company: 'Madanyu',
+      company_url: 'https://madanyu.org/',
+      background: `Madanyu is an organisation that runs computing education programs in 3rd world countries. 
+        Madanyu uses the Raspberry Pi as a cheap and accessible computer, and teaches teachers how to educate their students about basic computing skills.`,
+      role: `My role as a volunteer instructor was to develop my own program to teach in India.
+        I worked with teachers from the NGO Agastya to use music (specifically the Ukulele) as a way of introducing children to computing via audio recording and editing software.`,
+      links: {'MusicalPi Webpage':'https://madanyu.org/projects/music',
+        'Trip write up for Pembroke College':'http://www.pem.cam.ac.uk/wp-content/uploads/2013/05/Charlie-Crisp-India.pdf',
+        'Agastya International Foundation':'https://www.agastya.org/'},
+      tech_stack: []
+    },
   ]
 };
 
