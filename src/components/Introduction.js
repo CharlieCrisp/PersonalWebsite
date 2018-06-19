@@ -31,6 +31,9 @@ export default class Introduction extends Component {
         <div className='intro-box'>
           <h1>I'm Charlie Crisp!</h1>
           I am a software engineer who graduated from Pembroke College, the University of Cambridge in June 2018.
+          <br />
+          <br />
+          <b>Email: [firstname][lastname]249@gmail.com</b>
         </div>
       </div>
       : 
@@ -38,6 +41,9 @@ export default class Introduction extends Component {
         <div className='intro-text'>
           <h1>I'm Charlie Crisp!</h1>
           I am a software engineer who graduated from Pembroke College, the University of Cambridge in June 2018.
+          <br />
+          <br />
+          <b>Email: [firstname][lastname]249@gmail.com</b>
         </div>
       </div>}
       </div>
