@@ -52,6 +52,20 @@ const positionsData = {
       tech_stack: []
     },
     {
+      desktop_image: '/redgatebanner.png',
+      mobile_image: '/redgatelogo.jpg',
+      title: 'Software Engineer Intern',
+      date: 'July - September 2017',
+      company: 'RedGate',
+      company_url: 'https://www.red-gate.com/',
+      background: `RedGate is a Cambridge based software company that produces tools for interacting with and managing databases.`,
+      role: `As a software engineer intern I worked on the ReadyRoll product which is a Visual Studio extension for managing database migrations. 
+        During my internship, I worked with visual studio and visual studio team services. 
+        I also got the opportunity to experience an agile software development process using Git for version control and TeamCity for continuous integration.`,
+      tech_stack: [],
+      links: []
+    },
+    {
       desktop_image: '/madanyubanner.png',
       mobile_image: '/madanyulogo.png',
       title: 'Volunteer Instructor',
