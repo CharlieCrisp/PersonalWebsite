@@ -293,20 +293,20 @@ ul.nav{
   display: flex;
   flex-direction: row;
   width: 100%;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 770px) {
     flex-direction: column;
   } 
 }
 .highlights-container {
   margin: 20px;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 770px) {
     width: 35%;
     max-width: 300px;
   } 
 }
 .selected-positions {
   margin: 20px;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 770px) {
     width: auto;
   } 
 }
