@@ -5,23 +5,9 @@ export default class Position extends Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      width: window.innerWidth,
       open: false,
     };
   }
-
-  componentWillMount() {
-    window.addEventListener('resize', this.handleWindowSizeChange.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.handleWindowSizeChange.bind(this));
-  }
-
-  handleWindowSizeChange() {
-    console.log('triggered');
-    this.setState({ width: window.innerWidth });
-  };
 
   render() {
     const { position } = this.props;
@@ -54,15 +40,17 @@ export default class Position extends Component {
       <div className="position-container">
         <div className="image-container" >
           <div className="screenshot-container">
-            { this.state.width <= 500 ? <img src={position.mobile_image}/> : <img src={position.desktop_image}/>}
+            <img src={position.image}/>
           </div>
         </div>
         <div className="position-info-container">
           <div className="position-info-main">
-            <h2 onClick={onExpandClick} style={{'cursor': 'pointer'}}>
-              <i style={{'font-size': '20px'}} className={this.state.open ? "more-less glyphicon glyphicon-minus" : "more-less glyphicon glyphicon-plus"}> </i>
-              {" " + position.title}
-            </h2>
+            <div onClick={onExpandClick} style={{'cursor': 'pointer','display': 'flex', 'flexDirection': 'row', 'alignItems':'center'}}>
+              <h2>
+                {position.title}
+              </h2>
+              <i style={{'fontSize': '20px', 'marginLeft': 'auto'}} className={this.state.open ? "more-less glyphicon glyphicon-minus" : "more-less glyphicon glyphicon-plus"}> </i>
+            </div>
             {position.company != ''
               ? <div> {position.company_url != '' 
                 ? <a href={position.company_url} target="_blank"> {position.company} </a> 

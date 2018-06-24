@@ -1,7 +1,7 @@
 const positionsData = {
   data: [
     {
-      desktop_image: '/hcbanner.png',
+      image: '/hcbanner.png',
       mobile_image: '/hclogo.png',
       title: 'General Manager/Social Media Manager',
       date: '2016-2018',
@@ -15,7 +15,7 @@ const positionsData = {
       tech_stack: []
     },
     {
-      desktop_image: '/hacbanner.png',
+      image: '/hacbanner.png',
       mobile_image: '/haclogo.png',
       title: 'Events, Social Media and Recruiting Manager',
       date: '2016-2018',
@@ -33,7 +33,7 @@ const positionsData = {
       tech_stack: []
     },
     {
-      desktop_image: '/mspbanner.png',
+      image: '/mspbanner.png',
       mobile_image: '/msplogo.png',
       title: 'Microsoft Student Parter',
       date: '2016-2018 (MSP Lead 2016-2017)',
@@ -52,7 +52,7 @@ const positionsData = {
       tech_stack: []
     },
     {
-      desktop_image: '/redgatebanner.png',
+      image: '/redgatebanner.png',
       mobile_image: '/redgatelogo.jpg',
       title: 'Software Engineer Intern',
       date: 'July - September 2017',
@@ -66,7 +66,7 @@ const positionsData = {
       links: []
     },
     {
-      desktop_image: '/madanyubanner.png',
+      image: '/madanyubanner.png',
       mobile_image: '/madanyulogo.png',
       title: 'Volunteer Instructor',
       date: 'Summer 2016',

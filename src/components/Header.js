@@ -17,7 +17,6 @@ export default class Header extends Component {
   }
 
   handleWindowSizeChange() {
-    console.log('triggered');
     this.setState({ width: window.innerWidth });
   };
 

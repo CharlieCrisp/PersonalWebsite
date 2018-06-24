@@ -6,6 +6,7 @@ import Position from '../components/Position';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Introduction from '../components/Introduction';
+import Highlight from '../components/Highlight';
 import { startTime } from '../index';
 
 /**
@@ -14,22 +15,49 @@ import { startTime } from '../index';
  * component to make the Redux store available to the rest of the app.
  */
 export class App extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      width: window.innerWidth
+    };
+  }
+
+  componentWillMount() {
+    window.addEventListener('resize', this.handleWindowSizeChange.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowSizeChange.bind(this));
+  }
+
+  handleWindowSizeChange() {
+    this.setState({ width: window.innerWidth });
+  };
+
   componentDidMount() {
     const { actions } = this.props;
     actions.updateBenchmark(new Date().getTime() - startTime);
   }
 
   render() {
-    const { positions, personalInfo } = this.props;
-    const positionEntries = positions.map((position, index) => <Position key={index} position={position} /> );
+    const { positions, personalInfo, highlights } = this.props;
+    const positionEntries = positions.map((position, index) => <Position key={index} position={position} width={this.state.width}/> );
+    const highlightEntries = highlights.map((highlight, index) => <Highlight key={index} highlight={highlight} width={this.state.width} />);
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
         <Header personalInfo={personalInfo} />
-        <div> <Introduction personalInfo={personalInfo} /> </div>
-        <div className="main-app-nav">Selected Positions</div>
-        {/* notice that we then pass those unpacked props into the Counter component */}
-          {positionEntries}
+        <div> <Introduction personalInfo={personalInfo} width={this.state.width} /> </div>
+        <div className="flex-column-container">
+          <div className="highlights-container">
+            <h1>Highlights</h1>
+            {highlightEntries}
+          </div>
+          <div className="selected-positions">
+            <h1>Selected Positions</h1>
+            {positionEntries}
+          </div>
+        </div>
         <Footer personalInfo={personalInfo} />
       </div>
     );
@@ -40,7 +68,8 @@ App.propTypes = {
   positions: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired,
   benchmark: PropTypes.number.isRequired,
-  personalInfo: PropTypes.object.isRequired
+  personalInfo: PropTypes.object.isRequired,
+  highlights: PropTypes.array.isRequired
 };
 
 /**
@@ -52,7 +81,8 @@ function mapStateToProps(state) {
   return {
     positions: state.positions,
     benchmark: state.benchmark,
-    personalInfo: state.personalInfo
+    personalInfo: state.personalInfo,
+    highlights: state.highlights
   };
 }
 

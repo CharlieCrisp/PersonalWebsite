@@ -3,6 +3,7 @@ import counter from './counter';
 import positions from './positions';
 import benchmark from './benchmark';
 import personalInfo from './personalInfo';
+import highlights from './highlights';
 
 /**
  * combineReducers is important to understand. As your app might grow in size
@@ -21,7 +22,8 @@ const rootReducer = combineReducers({
   counter, // you might be used to: counter: counter,
   positions,
   benchmark,
-  personalInfo
+  personalInfo,
+  highlights
 });
 
 export default rootReducer;
