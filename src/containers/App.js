@@ -9,6 +9,7 @@ import { startTime } from '../index';
 import { Route } from 'react-router-dom';
 import PositionsContainer from './PositionsContainer';
 import EducationContainer from './EducationContainer';
+import PagesOverview from './PagesOverview';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -49,6 +50,7 @@ export class App extends Component {
       <div className="main-app-container">
         <Header personalInfo={personalInfo} />
         <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
+        <Route exact path='/' render={() => <PagesOverview />} />
         <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
         <Route path='/education' render={() => <EducationContainer education={education}/>} />
         <Footer personalInfo={personalInfo} />
