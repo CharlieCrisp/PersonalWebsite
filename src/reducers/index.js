@@ -3,7 +3,7 @@ import counter from './counter';
 import positions from './positions';
 import benchmark from './benchmark';
 import personalInfo from './personalInfo';
-import highlights from './highlights';
+import education from './education';
 
 /**
  * combineReducers is important to understand. As your app might grow in size
@@ -23,7 +23,7 @@ const rootReducer = combineReducers({
   positions,
   benchmark,
   personalInfo,
-  highlights
+  education
 });
 
 export default rootReducer;

@@ -1,7 +1,7 @@
-const highlightsData = {
+const educationData = {
   data: [
     {
-      image: 'cambridgelogo.png',
+      image: 'cambridgebanner.png',
       date: '2015-2018',
       company: 'University of Cambridge',
       company_url: 'http://www.cl.cam.ac.uk/',
@@ -25,4 +25,4 @@ const highlightsData = {
     }
   ]
 }
-export { highlightsData };
+export { educationData };

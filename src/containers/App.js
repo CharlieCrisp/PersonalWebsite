@@ -2,12 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as BenchmarkActions from '../actions/BenchmarkActions';
-import Position from '../components/Position';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Introduction from '../components/Introduction';
-import Highlight from '../components/Highlight';
 import { startTime } from '../index';
+import { Route } from 'react-router-dom';
+import PositionsContainer from './PositionsContainer';
+import EducationContainer from './EducationContainer';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -40,24 +41,16 @@ export class App extends Component {
   }
 
   render() {
-    const { positions, personalInfo, highlights } = this.props;
-    const positionEntries = positions.map((position, index) => <Position key={index} position={position} width={this.state.width}/> );
-    const highlightEntries = highlights.map((highlight, index) => <Highlight key={index} highlight={highlight} width={this.state.width} />);
+    const { positions, personalInfo, education } = this.props;
+    
+    
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
         <Header personalInfo={personalInfo} />
-        <div> <Introduction personalInfo={personalInfo} width={this.state.width} /> </div>
-        <div className="flex-column-container">
-          <div className="highlights-container">
-            <h1>Highlights</h1>
-            {highlightEntries}
-          </div>
-          <div className="selected-positions">
-            <h1>Selected Positions</h1>
-            {positionEntries}
-          </div>
-        </div>
+        <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
+        <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
+        <Route path='/education' render={() => <EducationContainer education={education}/>} />
         <Footer personalInfo={personalInfo} />
       </div>
     );
@@ -69,7 +62,7 @@ App.propTypes = {
   actions: PropTypes.object.isRequired,
   benchmark: PropTypes.number.isRequired,
   personalInfo: PropTypes.object.isRequired,
-  highlights: PropTypes.array.isRequired
+  education: PropTypes.array.isRequired
 };
 
 /**
@@ -82,7 +75,7 @@ function mapStateToProps(state) {
     positions: state.positions,
     benchmark: state.benchmark,
     personalInfo: state.personalInfo,
-    highlights: state.highlights
+    education: state.education
   };
 }
 

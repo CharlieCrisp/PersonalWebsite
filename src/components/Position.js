@@ -19,7 +19,6 @@ export default class Position extends Component {
 
     let onExpandClick = () => {
       let body = document.getElementById(positionId);
-      let toggle = document.getElementById(positionSeeMoreId);
       switch (this.state.open) {
          case true:
            body.style.display = 'none';

@@ -23,33 +23,32 @@ export default class Header extends Component {
   render() {
     const { personalInfo } = this.props;
     return (
-          <nav className="navbar navbar-fixed-top navbar-inner header">
-
-            <div className="container">
-              <div className="navbar-brand">
-                <a href="#" > {personalInfo.name} </a>
-              </div>
-              { this.state.width >= 320 ?
-              <ul className="nav navbar-nav pull-right">
-                <li>
-                  <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
-                    <span>CV</span>
-                  </a>
-                </li>
-                <li>
-                  <a href={personalInfo.github} className="nav-link" target="_blank">
-                    <i className="fa fa-github icon"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href={personalInfo.linkedIn} className="nav-link" target="_blank">
-                    <i className="fa fa-linkedin-square icon"></i>
-                  </a>
-                </li>
-                </ul>
-              : null}
-            </div>
-            </nav>
+      <nav className="navbar navbar-fixed-top navbar-inner header">
+        <div className="container">
+          <div className="navbar-brand">
+            <a href="/" > {personalInfo.name} </a>
+          </div>
+          { this.state.width >= 320 ?
+          <ul className="nav navbar-nav pull-right">
+            <li>
+              <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
+                <span>CV</span>
+              </a>
+            </li>
+            <li>
+              <a href={personalInfo.github} className="nav-link" target="_blank">
+                <i className="fa fa-github icon"></i>
+              </a>
+            </li>
+            <li>
+              <a href={personalInfo.linkedIn} className="nav-link" target="_blank">
+                <i className="fa fa-linkedin-square icon"></i>
+              </a>
+            </li>
+            </ul>
+          : null}
+        </div>
+      </nav>
     );
   }
 }
