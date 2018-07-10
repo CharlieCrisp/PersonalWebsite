@@ -19,8 +19,10 @@ import RoutesOverview from './RoutesOverview';
 export class App extends Component {
   constructor(props, context) {
     super(props, context);
+
     this.state = {
-      width: window.innerWidth
+      width: window.innerWidth,
+      navbarHeight:0
     };
   }
 
@@ -33,10 +35,14 @@ export class App extends Component {
   }
 
   handleWindowSizeChange() {
-    this.setState({ width: window.innerWidth });
+    let element = document.getElementById("myNavbar");
+    console.log("navbar height: " + element.clientHeight);
+    this.setState({ width: window.innerWidth, navbarHeight: element.clientHeight });
   };
 
   componentDidMount() {
+    let element = document.getElementById("myNavbar");
+    this.setState({navbarHeight: element.clientHeight});
     const { actions } = this.props;
     actions.updateBenchmark(new Date().getTime() - startTime);
   }
@@ -48,8 +54,8 @@ export class App extends Component {
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
-        <Header personalInfo={personalInfo} />
-        <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
+        <Header personalInfo={personalInfo} routes={routes} />
+        <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} navbarHeight={this.state.navbarHeight} width={this.state.width} />}/>
         <Route exact path='/' render={() => <RoutesOverview routes={routes}/>} />
         <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
         <Route path='/education' render={() => <EducationContainer education={education}/>} />

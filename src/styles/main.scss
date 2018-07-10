@@ -49,7 +49,7 @@ h3 {
 }
 
 .main-app-container {
-  padding-top: 5px;
+  margin-top: -5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,7 +161,6 @@ footer {
   /* remove the gradient */
   background-image: none !important;
   box-shadow: 0 8px 6px -6px rgba(0,0,0, .2);
-  padding-top: 10px;
   margin-bottom: 0;
 }
 
@@ -239,6 +238,7 @@ ul.nav{
   background-repeat: no-repeat;
   color: #ccc;
   padding-bottom: 20px;
+  margin-top: -5px;
   display: flex;
   justify-content: flex-end;
 }
@@ -257,6 +257,7 @@ ul.nav{
 
 .me-mobile {
   width: 100%;
+  padding-top: 0px;
 }
 
 .intro-text {
@@ -285,9 +286,6 @@ ul.nav{
   margin-left: auto;
 }
 
-.navbar {
-  height: 70px;
-}
 
 .flex-column-container {
   display: flex;

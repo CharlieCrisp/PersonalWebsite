@@ -21,15 +21,20 @@ export default class Header extends Component {
   };
 
   render() {
-    const { personalInfo } = this.props;
+    const { personalInfo, routes } = this.props;
+    const routeElements = routes.map((route, index) => 
+      <li key={index} className="nav-item">
+        <a className="nav-link" href={route.url} style={{ lineHeight: 'normal' }}>{route.name}</a>
+      </li> );
+
     return (
       <nav className="navbar navbar-fixed-top navbar-inner header">
-        <div className="container">
-          <div className="navbar-brand">
-            <a href="/" > {personalInfo.name} </a>
+        <div className="container" id="myNavbar">
+          <div className="navbar-brand" style={{textAlign:"center"}}>
+            <a href="/">Home</a>
           </div>
-          { this.state.width >= 320 ?
           <ul className="nav navbar-nav pull-right">
+            {routeElements}
             <li>
               <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
                 <span>CV</span>
@@ -46,7 +51,6 @@ export default class Header extends Component {
               </a>
             </li>
             </ul>
-          : null}
         </div>
       </nav>
     );
