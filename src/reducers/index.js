@@ -3,6 +3,7 @@ import counter from './counter';
 import positions from './positions';
 import benchmark from './benchmark';
 import personalInfo from './personalInfo';
+import routes from './routes';
 import education from './education';
 
 /**
@@ -23,7 +24,8 @@ const rootReducer = combineReducers({
   positions,
   benchmark,
   personalInfo,
-  education
+  education,
+  routes
 });
 
 export default rootReducer;

@@ -304,3 +304,34 @@ ul.nav{
     width: auto;
   } 
 }
+
+.routeTile {
+  @media screen and (max-width: 770px) {
+    width: 100%;
+  } 
+  @media screen and (min-width: 770px) {
+    width: 50%;
+  } 
+  // @media screen and (min-width: 1100px) {
+  //   width: 33%;
+  // } 
+  padding-top: 13%;
+  padding-bottom: 15%;
+  text-align: center; /* For IE8 and earlier */
+  cursor: pointer;
+  overflow:hidden;
+  position: relative;
+}
+
+.routeTile h1 {
+  color: #020202;
+}
+
+
+.routeTileHolder {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  margin-top: -20px;
+  max-width: 800px;
+}
