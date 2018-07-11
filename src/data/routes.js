@@ -14,6 +14,11 @@ const routesData = {
       image: 'wvlogo.png',
       name: 'Projects',
       url: '/projects',
+    },
+    {
+      image: 'blogstile.png',
+      name: 'Blogs/Workshops',
+      url: '/blogs',
     }
   ]
   }

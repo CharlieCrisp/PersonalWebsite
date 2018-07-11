@@ -11,6 +11,7 @@ import PositionsContainer from './PositionsContainer';
 import EducationContainer from './EducationContainer';
 import RoutesOverview from './RoutesOverview';
 import ProjectsContainer from './ProjectsContainer';
+import BlogsContainer from './BlogsContainer';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -61,7 +62,7 @@ export class App extends Component {
   }
 
   render() {
-    const { positions, personalInfo, education, routes, projects } = this.props;
+    const { positions, personalInfo, education, routes, projects, blogs } = this.props;
     
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
@@ -71,6 +72,7 @@ export class App extends Component {
         <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
         <Route exact path='/' render={() => <RoutesOverview routes={routes}/>} />
         <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
+        <Route path='/blogs' render={() => <BlogsContainer blogs={blogs}/>} />
         <Route path='/projects' render={() => <ProjectsContainer projects={projects} />} />
         <Route path='/education' render={() => <EducationContainer education={education}/>} />
         <Footer personalInfo={personalInfo} />
@@ -86,7 +88,8 @@ App.propTypes = {
   personalInfo: PropTypes.object.isRequired,
   education: PropTypes.array.isRequired,
   routes: PropTypes.array.isRequired,
-  projects: PropTypes.array.isRequired
+  projects: PropTypes.array.isRequired,
+  blogs: PropTypes.array.isRequired
 };
 
 /**
@@ -101,7 +104,8 @@ function mapStateToProps(state) {
     personalInfo: state.personalInfo,
     education: state.education,
     routes: state.routes,
-    projects: state.projects
+    projects: state.projects,
+    blogs: state.blogs
   };
 }
 

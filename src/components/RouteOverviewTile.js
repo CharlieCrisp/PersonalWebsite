@@ -55,7 +55,7 @@ export default class RouteOverviewTile extends Component {
     return (
       <div id={this.state.id} className="routeTile" style={{background: bgString, backgroundSize: "contain"}} 
         onMouseOver={()=>this.mouseOver()} onMouseOut={()=>this.mouseOut()} onClick={()=>window.location=route.url} >
-        <h1 style={{fontSize: "50px"}}>{route.name}</h1>
+        <h1 style={{fontSize: "50px", wordWrap:"break-word"}}>{route.name}</h1>
       </div>
     );
   }
