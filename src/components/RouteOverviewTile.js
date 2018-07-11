@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 let hoverTransparency = 0.75;
-let normTransparency = 0.85;
+let normTransparency = 0.55;
+let normGradient = 0.45;
 
 export default class RouteOverviewTile extends Component {
   constructor(props, context) {
@@ -18,7 +19,7 @@ export default class RouteOverviewTile extends Component {
     const color = this.props.color;
     const route = this.props.route;
     var bgString = `
-      linear-gradient(
+      linear-gradient(-45deg,
         rgba(${color[0]},${color[1]},${color[2]},${hoverTransparency}), 
         rgba(${color[0]},${color[1]},${color[2]},${hoverTransparency})
       ),
@@ -32,8 +33,8 @@ export default class RouteOverviewTile extends Component {
     const color = this.props.color;
     const route = this.props.route;
     var bgString = `
-      linear-gradient(
-        rgba(${color[0]},${color[1]},${color[2]},${normTransparency}), 
+      linear-gradient(-45deg,
+        rgba(${color[0]},${color[1]},${color[2]},${normTransparency + normGradient}), 
         rgba(${color[0]},${color[1]},${color[2]},${normTransparency})
       ),
       url(${route.image}) no-repeat center`;
@@ -45,8 +46,8 @@ export default class RouteOverviewTile extends Component {
     const route = this.props.route;
     const color = this.props.color;
     var bgString = `
-      linear-gradient(
-        rgba(${color[0]},${color[1]},${color[2]},${normTransparency}), 
+      linear-gradient(-45deg,
+        rgba(${color[0]},${color[1]},${color[2]},${normTransparency + normGradient}), 
         rgba(${color[0]},${color[1]},${color[2]},${normTransparency})
       ),
       url(${route.image}) no-repeat center`;
@@ -54,7 +55,7 @@ export default class RouteOverviewTile extends Component {
     return (
       <div id={this.state.id} className="routeTile" style={{background: bgString, backgroundSize: "contain"}} 
         onMouseOver={()=>this.mouseOver()} onMouseOut={()=>this.mouseOut()} onClick={()=>window.location=route.url} >
-        <h1>{route.name}</h1>
+        <h1 style={{fontSize: "50px"}}>{route.name}</h1>
       </div>
     );
   }

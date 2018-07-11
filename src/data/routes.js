@@ -11,7 +11,7 @@ const routesData = {
       url: '/positions',
     },
     {
-      image: '',
+      image: 'wvlogo.png',
       name: 'Projects',
       url: '/projects',
     }
