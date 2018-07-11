@@ -27,3 +27,7 @@ app.listen(process.env.PORT || 3000, (err) => {
 
   console.log('Listening at http://localhost:3000');
 });
+
+setInterval(function() {
+  http.get("http://charliecrisp.com");
+}, 300000); // every 5 minutes (300000)
