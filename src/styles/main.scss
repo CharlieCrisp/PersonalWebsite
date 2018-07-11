@@ -74,6 +74,19 @@ h3 {
           box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
+.project-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $position-container-color;
+  height: auto;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 4vh;
+  -webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 100px rgba(0, 0, 0, 0.1) inset;
+     -moz-box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 100px rgba(0, 0, 0, 0.1) inset;
+          box-shadow:0 5px 10px rgba(0, 0, 0, 0.3), 0 0 100px rgba(0, 0, 0, 0.1) inset;
+}
+
 .screenshot-container {
   margin-right: 4vw;
   height: auto;

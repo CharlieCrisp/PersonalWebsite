@@ -32,7 +32,7 @@ export default class Project extends Component {
     };
 
     return (
-      <div className="position-container">
+      <div className="project-container">
         <div className="image-container" >
           <div className="screenshot-container">
             <img src={project.image}/>
