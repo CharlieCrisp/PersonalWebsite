@@ -28,14 +28,17 @@ body {
   display: flex;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.6rem;
-  margin-top: 65px;
+  padding-top: 65px;
   @media only screen and (max-device-width: 600px) {
     font-size: 3rem;
   }
 }
+h1 {
+  margin-top: 10px;
+}
 
 h2 {
+  margin-top: 10px;
   @media only screen and (max-device-width: 600px) {
     font-size: 5rem;
   } 
@@ -46,6 +49,10 @@ h3 {
   @media only screen and (max-device-width: 600px) {
     font-size: 4rem;
   } 
+}
+
+#root{
+  width: 100%;
 }
 
 .main-app-container {
@@ -59,6 +66,28 @@ h3 {
 .main-app-nav {
   font-size: 2em;
   text-align: left;
+}
+
+.navbar{
+  width: 100%;
+  line-height: normal;
+  font-family: Roboto Slab, sans-serif;
+}
+
+.navbar-nav{
+  margin-left: auto;
+  color: white;
+}
+
+
+ul.nav{
+  display:inline-flex;
+}
+
+.nav-link{
+  border-top: 4px solid transparent;
+  transition: border-top .3s;
+  &:hover{border-top: 4px solid dodgerblue;}
 }
 
 .position-container {
@@ -114,7 +143,6 @@ h3 {
      -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
           box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-
 
 .screen {
   position: relative;
@@ -184,16 +212,6 @@ footer {
   margin-top: -5px;
 }
 
-ul.nav{
-  display:inline-flex;
-}
-
-.nav-link{
-  border-top: 4px solid transparent;
-  transition: border-top .3s;
-  &:hover{border-top: 4px solid dodgerblue;}
-}
-
 .hide-when-small {
   @media screen and (max-width: 800px) {
     display: none;
@@ -243,6 +261,7 @@ ul.nav{
   -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  width: 100vw;
 }
 
 .large-introduction {
@@ -262,6 +281,7 @@ ul.nav{
   justify-content: center;
   padding-left: 0;
   padding-right: 0;
+  max-width: 100% !important;
 }
 
 @media screen and (max-width:700px) {
@@ -271,6 +291,7 @@ ul.nav{
 .me-mobile {
   width: 100%;
   padding-top: 0px;
+  margin-top: -5px;
 }
 
 .intro-text {
@@ -287,18 +308,6 @@ ul.nav{
     margin: 0px 30px 30px 30px;  
   }
 }
-
-.navbar-brand {
-  line-height: normal;
-  @media only screen and (max-device-width: 600px) {
-    font-size: 3rem;
-  } 
-}
-
-.navbar-nav {
-  margin-left: auto;
-}
-
 
 .flex-column-container {
   display: flex;

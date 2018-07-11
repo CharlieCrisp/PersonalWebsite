@@ -24,7 +24,6 @@ export class App extends Component {
 
     this.state = {
       width: window.innerWidth,
-      navbarHeight:0
     };
   }
 
@@ -37,28 +36,12 @@ export class App extends Component {
   }
 
   handleWindowSizeChange() {
-    let element = document.getElementById("myNavbar");
-    console.log("navbar height: " + element.clientHeight);
-    this.setState({ width: window.innerWidth, navbarHeight: element.clientHeight });
-    let top = document.getElementById("top-item");
-    if (element.clientHeight > 100) {
-      top.style.marginTop = "50px";
-    } else {
-      top.style.marginTop = "0px";
-    }
+    this.setState({ width: window.innerWidth });
   };
 
   componentDidMount() {
-    let element = document.getElementById("myNavbar");
-    this.setState({navbarHeight: element.clientHeight});
     const { actions } = this.props;
     actions.updateBenchmark(new Date().getTime() - startTime);
-    let top = document.getElementById("top-item");
-    if (element.clientHeight > 100) {
-      top.style.marginTop = "50px";
-    } else {
-      top.style.marginTop = "0px";
-    }
   }
 
   render() {
@@ -66,9 +49,9 @@ export class App extends Component {
     
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
+      <div>
+      <Header personalInfo={personalInfo} routes={routes} />
       <div className="main-app-container">
-        <Header personalInfo={personalInfo} routes={routes} />
-        <div id="top-item"></div>
         <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
         <Route exact path='/' render={() => <RoutesOverview routes={routes}/>} />
         <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
@@ -76,6 +59,7 @@ export class App extends Component {
         <Route path='/projects' render={() => <ProjectsContainer projects={projects} />} />
         <Route path='/education' render={() => <EducationContainer education={education}/>} />
         <Footer personalInfo={personalInfo} />
+      </div>
       </div>
     );
   }

@@ -24,16 +24,17 @@ export default class Header extends Component {
     const { personalInfo, routes } = this.props;
     const routeElements = routes.map((route, index) => 
       <li key={index} className="nav-item">
-        <a className="nav-link" href={route.url} style={{ lineHeight: 'normal' }}>{route.name}</a>
+        {<a className="nav-link" href={route.url} style={{ lineHeight: 'normal' }}>{route.name}</a> }
       </li> );
 
     return (
-      <nav className="navbar navbar-fixed-top navbar-inner header">
-        <div className="container" id="myNavbar">
-          <div className="navbar-brand" style={{textAlign:"center"}}>
-            <a href="/">Home</a>
-          </div>
-          <ul className="nav navbar-nav pull-right">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-dark header" >
+        <a className="navbar-brand" href="/">Home</a>
+        <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbar">
+          <ul className="navbar-nav">
             {routeElements}
             <li>
               <a href={personalInfo.resume} className="nav-link" target="_blank" style={{ lineHeight: 'normal' }}>
@@ -50,7 +51,7 @@ export default class Header extends Component {
                 <i className="fa fa-linkedin-square icon"></i>
               </a>
             </li>
-            </ul>
+          </ul>
         </div>
       </nav>
     );
