@@ -10,6 +10,7 @@ import { Route } from 'react-router-dom';
 import PositionsContainer from './PositionsContainer';
 import EducationContainer from './EducationContainer';
 import RoutesOverview from './RoutesOverview';
+import ProjectsContainer from './ProjectsContainer';
 
 /**
  * It is common practice to have a 'Root' container/component require our main App (this one).
@@ -62,7 +63,6 @@ export class App extends Component {
   render() {
     const { positions, personalInfo, education, routes, projects } = this.props;
     
-    
     // we can use ES6's object destructuring to effectively 'unpack' our props
     return (
       <div className="main-app-container">
@@ -71,6 +71,7 @@ export class App extends Component {
         <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
         <Route exact path='/' render={() => <RoutesOverview routes={routes}/>} />
         <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
+        <Route path='/projects' render={() => <ProjectsContainer projects={projects} />} />
         <Route path='/education' render={() => <EducationContainer education={education}/>} />
         <Footer personalInfo={personalInfo} />
       </div>

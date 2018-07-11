@@ -5,6 +5,7 @@ import benchmark from './benchmark';
 import personalInfo from './personalInfo';
 import routes from './routes';
 import education from './education';
+import projects from './projects';
 
 /**
  * combineReducers is important to understand. As your app might grow in size
@@ -25,7 +26,8 @@ const rootReducer = combineReducers({
   benchmark,
   personalInfo,
   education,
-  routes
+  routes,
+  projects
 });
 
 export default rootReducer;

@@ -10,6 +10,11 @@ const routesData = {
       name: 'Positions',
       url: '/positions',
     },
+    {
+      image: '',
+      name: 'Projects',
+      url: '/projects',
+    }
   ]
   }
   export { routesData };
