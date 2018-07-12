@@ -44,11 +44,11 @@ export default class Position extends Component {
         </div>
         <div className="position-info-container">
           <div className="position-info-main">
-            <div onClick={onExpandClick} style={{'cursor': 'pointer','display': 'flex', 'flexDirection': 'row', 'alignItems':'center'}}>
+            <div onClick={onExpandClick} style={{'cursor': 'pointer','display': 'flex', 'flexDirection': 'row', 'alignItems':'center', 'position':'relative'}}>
               <h2>
                 {position.title}
               </h2>
-              <i style={{'fontSize': '20px', 'marginLeft': 'auto'}} className={this.state.open ? "more-less glyphicon glyphicon-minus" : "more-less glyphicon glyphicon-plus"}> </i>
+              <h2 style={{'marginLeft':'auto'}}><i className={this.state.open ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true"></i></h2>
             </div>
             {position.company != ''
               ? <div> {position.company_url != '' 

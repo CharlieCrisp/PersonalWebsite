@@ -41,10 +41,10 @@ export default class Blog extends Component {
           <div className="position-info-main">
             <div onClick={onExpandClick} style={{'cursor': 'pointer','display': 'flex', 'flexDirection': 'row', 'alignItems':'center'}}>
               <h2>{blog.title}</h2>
-              <i style={{'fontSize': '20px', 'marginLeft': 'auto'}} className={this.state.open ? "more-less glyphicon glyphicon-minus" : "more-less glyphicon glyphicon-plus"}> </i>
+              <h2 style={{'marginLeft':'auto'}}><i className={this.state.open ? "fa fa-minus" : "fa fa-plus"} aria-hidden="true"></i></h2>
             </div>
             <div>{blog.date}</div>
-            <a href={blog.url}><i className="more-less glyphicon glyphicon-link"></i> Webpage</a>
+            <a href={blog.url}><i className="fa fa-link" aria-hidden="true"></i> Webpage</a>
           </div>
           <div className='position-info-body' id={blogId}>
             <h3>Description</h3>
