@@ -1,13 +1,16 @@
 const blogsData = [
   {
-    title: `Coming Soon - Building with HashGraph Blog`,
+    title: `Building with HashGraph`,
     date: 'July 2018',
-    url: '#',
+    url: 'https://medium.com/hackers-at-cambridge/building-with-hashgraph-part-1-introduction-3232f9ea89ef',
     image: 'hashgraphbanner.png',
     description: `This is a two part blog about the new HashGraph technology.
       HashGraph is a technology which could provide similar properties to blockchain but with better properties. 
       In these blogs I describe what the HashGraph is, how it works and how you can get started building with the HashGraph SDK.`,
-    links: []
+    links: {
+      'Part 1: Introduction': 'https://medium.com/hackers-at-cambridge/building-with-hashgraph-part-1-introduction-3232f9ea89ef',
+      'Part 2: Technical Workthrough': 'https://medium.com/hackers-at-cambridge/building-with-hashgraph-part-1-introduction-3232f9ea89ef'
+    }
   },
   {
     title: `Continuous Integration Workshop`,
