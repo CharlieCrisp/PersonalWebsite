@@ -52,6 +52,7 @@ export class App extends Component {
       <div>
       <Header personalInfo={personalInfo} routes={routes} />
       <div className="main-app-container">
+        <div className="movember-banner">This year I'm doing Movember. Please dontate <a href="https://mobro.co/ccrisp">here</a>.</div>
         <Route exact path='/' render={() => <Introduction personalInfo={personalInfo} width={this.state.width} />}/>
         <Route exact path='/' render={() => <RoutesOverview routes={routes}/>} />
         <Route path='/positions' render={() => <PositionsContainer positions={positions} width={this.state.width}/>} />
